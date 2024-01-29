@@ -1,7 +1,7 @@
 import { Prisma, User } from '@prisma/client'
-import { UsersRespository } from '../users-repository'
+import { UsersRepository } from '../users-repository'
 
-export class InMemoryUsersRepository implements UsersRespository {
+export class InMemoryUsersRepository implements UsersRepository {
   public items: User[] = []
 
   async findByEmail(email: string) {
